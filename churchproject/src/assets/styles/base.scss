@@ -1,0 +1,43 @@
+@import './variables';
+@import './navigation';
+@import './latest-sermon';
+@import 'news-masonry';
+@import './footer';
+@import './media';
+@import './news';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: $background-color;
+  padding-top: 80px;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+button {
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 10px 15px;
+  border-radius: $border-radius;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    transform: scaleX(1.1) scaleY(1.1);
+  }
+
+  &:focus {
+    outline: none;
+  }
+}

@@ -1,0 +1,121 @@
+.navigation {
+  position: fixed;
+  z-index: 12;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 65px;
+  background: rgb(32,82,180);
+  background: linear-gradient(84deg, rgba(32,82,180,1) 0%, rgba(34,12,179,1) 0%, rgba(0,212,255,1) 100%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+  box-shadow: $normal-box-shadow;
+
+  .logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .logo-wrapper {
+      background: darken($accent-color, 25%);
+      border-radius: 50%;
+      width: 55px;
+      height: 55px;
+      padding: 5px;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        fill: #f2f2f2;
+      }
+    }
+
+    h1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 8px;
+      line-height: 19px;
+      text-transform: uppercase;
+      font-size: 15px;
+      font-weight: bold;
+      color: $background-color;
+    }
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-block-start: 11px;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      a {
+        color: $background-color;
+        font-size: 17px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        text-transform: capitalize;
+        margin: 0 20px;
+        transition: color 0.2s ease;
+        text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+
+        &:hover {
+          color: darken($background-color, 10%);
+        }
+      }
+    }
+  }
+
+  i {
+    font-size: 35px;
+    color: $background-color;
+    display: none;
+  }
+}
+
+@media screen and (max-width: 945px) {
+  .navigation {
+    ul {
+      padding-top: 30px;
+      position: fixed;
+      z-index: 10;
+      min-height: calc(100vh - 65px);
+      width: 200px;
+      top: 55px;
+      left: 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      background-color: $background-color;
+      box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+      transform: translateX(-200px);
+
+      &.active {
+        transform: translateY(0);
+      }
+
+      li {
+        a {
+          color: $text-color;
+          font-size: 22px;
+          text-shadow: 0;
+
+          &:hover {
+            color: $text-color;
+          }
+        }
+      }
+    }
+
+    i {
+      display: block;
+      cursor: pointer;
+    }
+  }
+}

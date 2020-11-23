@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS roles (
+    id int NOT NULL AUTO_INCREMENT,
+    title VARCHAR(20) NOT NULL,
+    PRIMARY KEY (id)
+)

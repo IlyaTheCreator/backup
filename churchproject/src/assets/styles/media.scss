@@ -1,0 +1,40 @@
+.media {
+  min-height: 100vh;
+
+  audio {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .custom-player {
+    display: none;
+    place-content: center;
+    height: 500px;
+
+    .anticon {
+      height: 150px;
+      width: 150px;
+      cursor: pointer;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        box-shadow: $normal-box-shadow;
+        border-radius: 50%;
+        fill: $secondary-color;
+        transition: all 0.2s ease;
+      }
+
+      &:hover {
+        svg {
+          box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS permissions (
+    id int NOT NULL AUTO_INCREMENT,
+    action VARCHAR(20) NOT NULL,
+    PRIMARY KEY (id)
+)
